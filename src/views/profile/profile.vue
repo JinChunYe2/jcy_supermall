@@ -1,6 +1,7 @@
 <template>
     <div>
         我的
+		<div class="slide"></div>
     </div>
 </template>
 
@@ -8,7 +9,7 @@
 export default {
     data () {
         return {
-            
+
         }
     }
 }

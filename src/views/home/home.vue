@@ -3,12 +3,15 @@
 		<nav-bar class = "home-nav">
 			<template v-slot:center><div>购物街</div></template>
 		</nav-bar>
+		<home-swiper :banners = "banners"></home-swiper>
     </div>
 </template>
 
 <script>
 import navBar from 'components/common/navbar/navBar'
+import homeSwiper from './childComps/homeSwiper'
 import {getHomeMultidata} from 'network/home'
+
 export default {
     data () {
         return {
@@ -19,7 +22,8 @@ export default {
         }
 	},
 	components:{
-		navBar
+		navBar,
+		homeSwiper
 	},
 	created(){
 		getHomeMultidata().then((res) => {
