@@ -4,12 +4,14 @@
 			<template v-slot:center><div>购物街</div></template>
 		</nav-bar>
 		<home-swiper :banners = "banners"></home-swiper>
+		<recommend-view :recommends = "recommends"></recommend-view>
     </div>
 </template>
 
 <script>
 import navBar from 'components/common/navbar/navBar'
 import homeSwiper from './childComps/homeSwiper'
+import recommendView from './childComps/recommendView'
 import {getHomeMultidata} from 'network/home'
 
 export default {
@@ -23,7 +25,8 @@ export default {
 	},
 	components:{
 		navBar,
-		homeSwiper
+		homeSwiper,
+		recommendView
 	},
 	created(){
 		getHomeMultidata().then((res) => {
